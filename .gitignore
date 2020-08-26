@@ -1,0 +1,4 @@
+docroot
+*~
+*.bak
+nohup.out
