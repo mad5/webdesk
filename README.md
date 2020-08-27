@@ -51,3 +51,7 @@ put your website into docroot-folder
 	mkdir docroot
 	touch docroot/run.php
 	
+ start the script 
+ 
+	run
+	
