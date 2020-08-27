@@ -1,4 +1,6 @@
-#webdesk
+# webdesk
+
+*lubuntu active desktop*
 
 Active Desktop was a function of the Microsoft Windows operating system to 
 display web pages directly on the desktop.
