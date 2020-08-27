@@ -1,8 +1,9 @@
 #!/bin/bash
+title=$1
 anz=0
 do=true
 while true; do
-    anz=$(wmctrl -l | grep webdeskwindow | wc -l)
+    anz=$(wmctrl -l | grep "$title" | wc -l)
     if (( "$anz" == "1" )); then
 	do=false
 	break
@@ -10,10 +11,10 @@ while true; do
     sleep 1
 done
 
-wmctrl -r "webdeskwindow" -b add,maximized_vert,maximized_horz
-wmctrl -r "webdeskwindow" -b add,below
+wmctrl -r "$title" -b add,maximized_vert,maximized_horz
+wmctrl -r "$title" -b add,below
 
-winid=$(wmctrl -lx | grep -E "webdeskwindow" | grep -oE "[0-9a-z]{10}")
+winid=$(wmctrl -lx | grep -E "$title" | grep -oE "[0-9a-z]{10}")
 winid2=$(echo $winid | awk '{print $1}')
 ./toggle-decorations $winid2
 

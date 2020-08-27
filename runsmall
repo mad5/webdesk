@@ -1,8 +1,7 @@
 MY_PATH="`dirname \"$0\"`"
 cd $MY_PATH
-./win "webdeskwindow" &
-nohup php -S 0.0.0.0:11234 -t docroot &
-pid=$!
+./win "Google" &
+
 nohup chromium-browser \
 	--disable-autofill-keyboard-accessory-view \
 	--disable-default-apps \
@@ -15,7 +14,6 @@ nohup chromium-browser \
 	--disable-prompt-on-repost \
 	--disable-popup-blocking \
 	--disable-translate \
-	--app=http://localhost:11234/run.php 2>/dev/null
+	--app=https://www.google.com 2>/dev/null
 
-kill $pid
 exit 0
