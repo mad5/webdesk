@@ -11,6 +11,8 @@ But what I always missed was the active desktop from back then.
 
 ##  extra tools you need
 
+### toggle-decorations
+
 Download from:
 
 https://gist.github.com/cat-in-136/96ee8e96e81e0cc763d085ed697fe193
@@ -20,11 +22,12 @@ Compile with:
 	gcc toggle-decorations.c -Wall -o toggle-decorations `pkg-config --cflags --libs x11`
  
 
-wmctrl to set window into back and make it full size
+### wmctrl 
+to set window into back and make it full size
  
 	sudo apt install wmctrl
 	
-chromium-browser
+### chromium-browser
 
 	sudo apt install chromium-browser
  
