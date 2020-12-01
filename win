@@ -14,7 +14,10 @@ done
 wmctrl -r "$title" -b add,maximized_vert,maximized_horz
 wmctrl -r "$title" -b add,below
 
+wmctrl -x -r localhost__run.php.Chromium -b add,skip_taskbar
+
 winid=$(wmctrl -lx | grep -E "$title" | grep -oE "[0-9a-z]{10}")
 winid2=$(echo $winid | awk '{print $1}')
+
 ./toggle-decorations $winid2
 
